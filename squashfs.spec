@@ -5,7 +5,7 @@ Version:	2.0
 Release:	1
 License:	GPL
 Group:		Base/Utilities
-Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}%{version}-ALPHA.tar.gz
+Source0:	http://dl.sourceforge.net/squashfs/%{name}%{version}-ALPHA.tar.gz
 # Source0-md5:	1729912704a299285be7b63988fe23b3
 URL:		http://squashfs.sourceforge.net/
 BuildRequires:	zlib-devel
