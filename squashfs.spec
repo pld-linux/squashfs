@@ -17,10 +17,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package contains utilities for squashfs filesystem.
 
 Squashfs is a highly compressed read-only filesystem for Linux (kernel
-2.4.x and 2.6.x). It uses zlib compression to compress both files, inodes and
-directories. Inodes in the system are very small and all blocks are
-packed to minimise data overhead. Block sizes greater than 4K are
-supported up to a maximum of 64K.
+2.4.x and 2.6.x). It uses zlib compression to compress both files,
+inodes and directories. Inodes in the system are very small and all
+blocks are packed to minimise data overhead. Block sizes greater than
+4K are supported up to a maximum of 64K.
 
 Squashfs is intended for general read-only filesystem use, for
 archival use (i.e. in cases where a .tar.gz file may be used), and in
@@ -31,10 +31,10 @@ low overhead is needed.
 Zestaw narzêdzi do tworzenia systemu plików squashfs.
 
 Squashfs jest systemem plików tylko do odczytu z du¿ym wspó³czynnikiem
-kompresji dla Linuksa (j±dra 2.4.x i 2.6.x). U¿ywa kompresji zlib do plików,
-i-wêz³ów oraz katalogów. I-wêz³y s± bardzo ma³e, a wszystkie bloki
-s± pakowane, aby zmniejszyæ objêto¶æ. Rozmiary bloków powy¿ej 4kB s±
-obs³ugiwane - maksymalnie do 64kB.
+kompresji dla Linuksa (j±dra 2.4.x i 2.6.x). U¿ywa kompresji zlib do
+plików, i-wêz³ów oraz katalogów. I-wêz³y s± bardzo ma³e, a wszystkie
+bloki s± pakowane, aby zmniejszyæ objêto¶æ. Rozmiary bloków powy¿ej
+4kB s± obs³ugiwane - maksymalnie do 64kB.
 
 Squashfs ma s³u¿yæ jako system plików tylko do odczytu ogólnego
 przeznaczenia, do sk³adowania archiwów (w tych przypadkach, kiedy
