@@ -2,11 +2,11 @@ Summary:	Set of tools which creates squashfs filesystem
 Summary(pl):	Zestaw narzêdzi do tworzenia systemu plików squashfs
 Name:		squashfs
 Version:	2.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Base/Utilities
-Source0:	http://dl.sourceforge.net/squashfs/%{name}%{version}.tar.gz
-# Source0-md5:	905c28aab3fa9706c9eeb77d839a0f09
+Source0:	http://dl.sourceforge.net/squashfs/%{name}%{version}-r2.tar.gz
+# Source0-md5:	ffa24eff13b2ca51ed6990d15237e4c1
 URL:		http://squashfs.sourceforge.net/
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,11 +42,10 @@ mo¿na u¿ywaæ plików .tar.gz) oraz w systemach z du¿ymi ograniczeniami
 pamiêci i urz±dzeñ blokowych (np. systemach wbudowanych).
 
 %prep
-%setup -q -n %{name}%{version}
+%setup -q -n %{name}%{version}-r2
 
 %build
-cd squashfs-tools
-%{__make} \
+%{__make} -C squashfs-tools \
 	CC="%{__cc}" \
 	CFLAGS="-I. %{rpmcflags}"
 
