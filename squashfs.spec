@@ -1,7 +1,7 @@
 Summary:	Set of tools which creates squashfs filesystem
 Summary(pl):	Zestaw narzêdzi do tworzenia systemu plików squashfs
 Name:		squashfs
-Version:	1.1
+Version:	1.1b
 Release:	1
 License:	GPL
 Group:		Base/Utilities
