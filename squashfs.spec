@@ -5,7 +5,7 @@ Version:	1.2
 Release:	1
 License:	GPL
 Group:		Base/Utilities
-Source0:	http://belnet.dl.sourceforge.net/sourceforge/squashfs/%{name}%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}%{version}.tar.gz
 # Source0-md5:	e06ffd204a621c77955ea6b8d68ea5d2
 Patch0:		%{name}-lseek.patch
 URL:		http://squashfs.sourceforge.net/
