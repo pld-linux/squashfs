@@ -1,4 +1,4 @@
-Summary:	Set of tools which creates squashfs filesytem
+Summary:	Set of tools which creates squashfs filesystem
 Summary(pl):	Zestaw narzêdzi do tworzenia systemu plików squashfs
 Name:		squashfs
 Version:	1.0
@@ -13,6 +13,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_sbindir	/sbin
 
 %description
+This package contains utilities for squashfs filesystem.
+
 Squashfs is a highly compressed read-only filesystem for Linux (kernel
 2.4.x). It uses zlib compression to compress both files, inodes and
 directories. Inodes in the system are very small and all blocks are
@@ -26,6 +28,17 @@ low overhead is needed.
 
 %description -l pl
 Zestaw narzêdzi do tworzenia systemu plików squashfs.
+
+Squashfs jest systemem plików tylko do odczytu z du¿ym wspó³czynnikiem
+kompresji dla Linuksa (j±dra 2.4.x). U¿ywa kompresji zlib do plików,
+i-wêz³ów oraz katalogów. I-wêz³y s± bardzo ma³e, a wszystkie bloki
+s± pakowane, aby zmniejszyæ objêto¶æ. Rozmiary bloków powy¿ej 4kB s±
+obs³ugiwane - maksymalnie do 32kB.
+
+Squashfs ma s³u¿yæ jako system plików tylko do odczytu ogólnego
+przeznaczenia, do sk³adowania archiwów (w tych przypadkach, kiedy
+mo¿na u¿ywaæ plików .tar.gz) oraz w systemach z du¿ymi ograniczeniami
+pamiêci i urz±dzeñ blokowych (np. systemach wbudowanych).
 
 %prep
 %setup -q -n squashfs1.0b
@@ -47,4 +60,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{_sbindir}
+%attr(755,root,root) %{_sbindir}/*
