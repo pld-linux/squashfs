@@ -1,12 +1,12 @@
 Summary:	Set of tools which creates squashfs filesystem
 Summary(pl):	Zestaw narzêdzi do tworzenia systemu plików squashfs
 Name:		squashfs
-Version:	2.2
+Version:	3.0
 Release:	1
 License:	GPL
 Group:		Base/Utilities
 Source0:	http://dl.sourceforge.net/squashfs/%{name}%{version}.tar.gz
-# Source0-md5:	9537f1bfa3efd5df722f1a85cd424414
+# Source0-md5:	9fd05d0bfbb712f5fb95edafea5bc733
 URL:		http://squashfs.sourceforge.net/
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -53,11 +53,12 @@ pamiêci i urz±dzeñ blokowych (np. systemach wbudowanych).
 rm -rf $RPM_BUILD_ROOT
 
 install -D squashfs-tools/mksquashfs $RPM_BUILD_ROOT%{_sbindir}/mksquashfs
+install    squashfs-tools/unsquashfs $RPM_BUILD_ROOT%{_sbindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README ACKNOWLEDGEMENTS CHANGES
+%doc *README* ACKNOWLEDGEMENTS CHANGES
 %attr(755,root,root) %{_sbindir}/*
