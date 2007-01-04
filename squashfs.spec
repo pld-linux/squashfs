@@ -1,12 +1,12 @@
 Summary:	Set of tools which creates squashfs filesystem
 Summary(pl):	Zestaw narzêdzi do tworzenia systemu plików squashfs
 Name:		squashfs
-Version:	3.1
+Version:	3.2
 Release:	1
 License:	GPL
 Group:		Base/Utilities
 Source0:	http://dl.sourceforge.net/squashfs/%{name}%{version}.tar.gz
-# Source0-md5:	60df8e106de8c6310e7aae871d481588
+# Source0-md5:	b96fa12e42dea5db50cf4a6ac4f563ed
 URL:		http://squashfs.sourceforge.net/
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
