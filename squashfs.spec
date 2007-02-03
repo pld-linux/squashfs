@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		Base/Utilities
 Source0:	http://dl.sourceforge.net/squashfs/%{name}%{version}.tar.gz
-# Source0-md5:	b96fa12e42dea5db50cf4a6ac4f563ed
+# Source0-md5:	e4818dbd8a81519ade8a41d26587c3f5
 URL:		http://squashfs.sourceforge.net/
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
