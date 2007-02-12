@@ -1,5 +1,5 @@
 Summary:	Set of tools which creates squashfs filesystem
-Summary(pl):	Zestaw narzêdzi do tworzenia systemu plików squashfs
+Summary(pl.UTF-8):   Zestaw narzÄ™dzi do tworzenia systemu plikÃ³w squashfs
 Name:		squashfs
 Version:	3.2
 Release:	1
@@ -27,19 +27,19 @@ archival use (i.e. in cases where a .tar.gz file may be used), and in
 constrained block device/memory systems (e.g. embedded systems) where
 low overhead is needed.
 
-%description -l pl
-Zestaw narzêdzi do tworzenia systemu plików squashfs.
+%description -l pl.UTF-8
+Zestaw narzÄ™dzi do tworzenia systemu plikÃ³w squashfs.
 
-Squashfs jest systemem plików tylko do odczytu z du¿ym wspó³czynnikiem
-kompresji dla Linuksa (j±dra 2.4.x i 2.6.x). U¿ywa kompresji zlib do
-plików, i-wêz³ów oraz katalogów. I-wêz³y s± bardzo ma³e, a wszystkie
-bloki s± pakowane, aby zmniejszyæ objêto¶æ. Rozmiary bloków powy¿ej
-4kB s± obs³ugiwane - maksymalnie do 64kB.
+Squashfs jest systemem plikÃ³w tylko do odczytu z duÅ¼ym wspÃ³Å‚czynnikiem
+kompresji dla Linuksa (jÄ…dra 2.4.x i 2.6.x). UÅ¼ywa kompresji zlib do
+plikÃ³w, i-wÄ™zÅ‚Ã³w oraz katalogÃ³w. I-wÄ™zÅ‚y sÄ… bardzo maÅ‚e, a wszystkie
+bloki sÄ… pakowane, aby zmniejszyÄ‡ objÄ™toÅ›Ä‡. Rozmiary blokÃ³w powyÅ¼ej
+4kB sÄ… obsÅ‚ugiwane - maksymalnie do 64kB.
 
-Squashfs ma s³u¿yæ jako system plików tylko do odczytu ogólnego
-przeznaczenia, do sk³adowania archiwów (w tych przypadkach, kiedy
-mo¿na u¿ywaæ plików .tar.gz) oraz w systemach z du¿ymi ograniczeniami
-pamiêci i urz±dzeñ blokowych (np. systemach wbudowanych).
+Squashfs ma sÅ‚uÅ¼yÄ‡ jako system plikÃ³w tylko do odczytu ogÃ³lnego
+przeznaczenia, do skÅ‚adowania archiwÃ³w (w tych przypadkach, kiedy
+moÅ¼na uÅ¼ywaÄ‡ plikÃ³w .tar.gz) oraz w systemach z duÅ¼ymi ograniczeniami
+pamiÄ™ci i urzÄ…dzeÅ„ blokowych (np. systemach wbudowanych).
 
 %prep
 %setup -q -n %{name}%{version}
