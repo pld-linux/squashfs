@@ -1,5 +1,5 @@
 Summary:	Set of tools which creates squashfs filesystem
-Summary(pl.UTF-8):   Zestaw narzędzi do tworzenia systemu plików squashfs
+Summary(pl.UTF-8):	Zestaw narzędzi do tworzenia systemu plików squashfs
 Name:		squashfs
 Version:	3.2
 Release:	1
