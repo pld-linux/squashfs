@@ -1,12 +1,12 @@
 Summary:	Set of tools which creates squashfs filesystem
 Summary(pl.UTF-8):	Zestaw narzędzi do tworzenia systemu plików squashfs
 Name:		squashfs
-Version:	3.4
+Version:	4.0
 Release:	1
 License:	GPL
 Group:		Base/Utilities
 Source0:	http://dl.sourceforge.net/squashfs/%{name}%{version}.tar.gz
-# Source0-md5:	2a4d2995ad5aa6840c95a95ffa6b1da6
+# Source0-md5:	a3c23391da4ebab0ac4a75021ddabf96
 URL:		http://squashfs.sourceforge.net/
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package contains utilities for squashfs filesystem.
 
 Squashfs is a highly compressed read-only filesystem for Linux (kernel
-2.4.x and 2.6.x). It uses zlib compression to compress both files,
+2.6.29 and above). It uses zlib compression to compress both files,
 inodes and directories. Inodes in the system are very small and all
 blocks are packed to minimise data overhead. Block sizes greater than
 4K are supported up to a maximum of 64K.
@@ -31,7 +31,7 @@ low overhead is needed.
 Zestaw narzędzi do tworzenia systemu plików squashfs.
 
 Squashfs jest systemem plików tylko do odczytu z dużym współczynnikiem
-kompresji dla Linuksa (jądra 2.4.x i 2.6.x). Używa kompresji zlib do
+kompresji dla Linuksa (2.6.29 i nowsze). Używa kompresji zlib do
 plików, i-węzłów oraz katalogów. I-węzły są bardzo małe, a wszystkie
 bloki są pakowane, aby zmniejszyć objętość. Rozmiary bloków powyżej
 4kB są obsługiwane - maksymalnie do 64kB.
