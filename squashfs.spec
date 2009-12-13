@@ -1,12 +1,16 @@
+%define	snap	20091213
 Summary:	Set of tools which creates squashfs filesystem
 Summary(pl.UTF-8):	Zestaw narzędzi do tworzenia systemu plików squashfs
 Name:		squashfs
-Version:	4.0
-Release:	1
+Version:	4.1
+Release:	0.%{snap}.1
 License:	GPL
 Group:		Base/Utilities
-Source0:	http://dl.sourceforge.net/squashfs/%{name}%{version}.tar.gz
-# Source0-md5:	a3c23391da4ebab0ac4a75021ddabf96
+# Source0:	http://dl.sourceforge.net/squashfs/%{name}%{version}.tar.gz
+Source0:	%{name}-%{snap}.tar.bz2
+# Source0-md5:	595391e4ae095e82214e7f96d53bc505
+Source1:	http://downloads.sourceforge.net/sevenzip/lzma465.tar.bz2
+# Source1-md5:	29d5ffd03a5a3e51aef6a74e9eafb759
 URL:		http://squashfs.sourceforge.net/
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,12 +46,14 @@ można używać plików .tar.gz) oraz w systemach z dużymi ograniczeniami
 pamięci i urządzeń blokowych (np. systemach wbudowanych).
 
 %prep
-%setup -q -n %{name}%{version}
+%setup -q -n %{name} -a1
+sed -i -e 's#^\#LZMA_SUPPORT.*=.*#LZMA_SUPPORT=1#g' squashfs-tools/Makefile
+sed -i -e "s#^LZMA_DIR.*=.*#LZMA_DIR = $(pwd)#g" squashfs-tools/Makefile
 
 %build
 %{__make} -C squashfs-tools \
 	CC="%{__cc}" \
-	CFLAGS="-I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE %{rpmcflags}"
+	CFLAGS="-I. -I$(pwd)/C -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DLZMA_SUPPORT=1 -DCOMP_DEFAULT=\\\"gzip\\\" %{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -60,5 +66,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *README* ACKNOWLEDGEMENTS CHANGES
 %attr(755,root,root) %{_sbindir}/*
