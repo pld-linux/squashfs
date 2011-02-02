@@ -5,9 +5,10 @@ Version:	4.1
 Release:	1
 License:	GPL
 Group:		Base/Utilities
-Source0:	http://dl.sourceforge.net/squashfs/%{name}%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/squashfs/%{name}%{version}.tar.gz
 # Source0-md5:	8e1b2b96f5d5f3fe48fef226ae8cd341
 URL:		http://squashfs.sourceforge.net/
+BuildRequires:	attr-devel
 BuildRequires:	lzo-devel >= 2.04
 BuildRequires:	xz-devel >= 5.0.0
 BuildRequires:	zlib-devel
