@@ -1,12 +1,12 @@
 Summary:	Set of tools which creates squashfs filesystem
 Summary(pl.UTF-8):	Zestaw narzędzi do tworzenia systemu plików squashfs
 Name:		squashfs
-Version:	4.1
+Version:	4.2
 Release:	1
 License:	GPL
 Group:		Base/Utilities
 Source0:	http://downloads.sourceforge.net/squashfs/%{name}%{version}.tar.gz
-# Source0-md5:	8e1b2b96f5d5f3fe48fef226ae8cd341
+# Source0-md5:	1b7a781fb4cf8938842279bd3e8ee852
 URL:		http://squashfs.sourceforge.net/
 BuildRequires:	attr-devel
 BuildRequires:	lzo-devel >= 2.04
