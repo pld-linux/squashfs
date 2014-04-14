@@ -2,7 +2,7 @@ Summary:	Set of tools which creates squashfs filesystem
 Summary(pl.UTF-8):	Zestaw narzędzi do tworzenia systemu plików squashfs
 Name:		squashfs
 Version:	4.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Base/Utilities
 Source0:	http://downloads.sourceforge.net/squashfs/%{name}%{version}.tar.gz
@@ -12,6 +12,11 @@ BuildRequires:	attr-devel
 BuildRequires:	lzo-devel >= 2.04
 BuildRequires:	xz-devel >= 5.0.0
 BuildRequires:	zlib-devel
+%ifarch %{x8664}
+Requires:	libgcc_s.so.1()(64bit)
+%else
+Requires:	libgcc_s.so.1
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbindir	/sbin
@@ -56,13 +61,14 @@ sed -i -e "s/-O2 -Wall/%{rpmcflags}/" squashfs-tools/Makefile
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -D squashfs-tools/mksquashfs $RPM_BUILD_ROOT%{_sbindir}/mksquashfs
-install    squashfs-tools/unsquashfs $RPM_BUILD_ROOT%{_sbindir}
+install -d $RPM_BUILD_ROOT%{_bindir}
+install -p squashfs-tools/mksquashfs $RPM_BUILD_ROOT%{_bindir}
+install -p squashfs-tools/unsquashfs $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_sbindir}/*
+%attr(755,root,root) %{_bindir}/mksquashfs
+%attr(755,root,root) %{_bindir}/unsquashfs
