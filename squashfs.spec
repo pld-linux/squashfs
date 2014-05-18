@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Zestaw narzędzi do tworzenia systemu plików squashfs
 Name:		squashfs
 Version:	4.3
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		Base/Utilities
 Source0:	http://downloads.sourceforge.net/squashfs/%{name}%{version}.tar.gz
 # Source0-md5:	d92ab59aabf5173f2a59089531e30dbf
