@@ -2,7 +2,7 @@ Summary:	Set of tools which creates squashfs filesystem
 Summary(pl.UTF-8):	Zestaw narzędzi do tworzenia systemu plików squashfs
 Name:		squashfs
 Version:	4.3
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Base/Utilities
 Source0:	http://downloads.sourceforge.net/squashfs/%{name}%{version}.tar.gz
@@ -55,6 +55,7 @@ pamięci i urządzeń blokowych (np. systemach wbudowanych).
 sed -i -e 's/^#XZ_SUPPORT.*=.*/XZ_SUPPORT = 1/'  squashfs-tools/Makefile
 sed -i -e 's/^#LZO_SUPPORT.*=.*/LZO_SUPPORT = 1/' squashfs-tools/Makefile
 sed -i -e 's/^#LZ4_SUPPORT.*=.*/LZ4_SUPPORT = 1/' squashfs-tools/Makefile
+sed -i -e 's/^#LZMA_XZ_SUPPORT.*=.*/LZMA_XZ_SUPPORT = 1/' squashfs-tools/Makefile
 sed -i -e "s/-O2 -Wall/%{rpmcflags}/" squashfs-tools/Makefile
 
 %build
