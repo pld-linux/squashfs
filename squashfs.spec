@@ -1,18 +1,19 @@
 Summary:	Set of tools which creates squashfs filesystem
 Summary(pl.UTF-8):	Zestaw narzędzi do tworzenia systemu plików squashfs
 Name:		squashfs
-Version:	4.3
-Release:	3
+Version:	4.4
+Release:	1
 License:	GPL v2+
 Group:		Base/Utilities
 Source0:	http://downloads.sourceforge.net/squashfs/%{name}%{version}.tar.gz
-# Source0-md5:	d92ab59aabf5173f2a59089531e30dbf
+# Source0-md5:	5033bea6cd522ef54b13755feea6c858
 URL:		http://squashfs.sourceforge.net/
 BuildRequires:	attr-devel
 BuildRequires:	lz4-devel
 BuildRequires:	lzo-devel >= 2.04
 BuildRequires:	xz-devel >= 5.0.0
 BuildRequires:	zlib-devel
+BuildRequires:	zstd-devel
 %ifarch %{x8664}
 Requires:	libgcc_s.so.1()(64bit)
 %else
@@ -56,6 +57,7 @@ sed -i -e 's/^#XZ_SUPPORT.*=.*/XZ_SUPPORT = 1/'  squashfs-tools/Makefile
 sed -i -e 's/^#LZO_SUPPORT.*=.*/LZO_SUPPORT = 1/' squashfs-tools/Makefile
 sed -i -e 's/^#LZ4_SUPPORT.*=.*/LZ4_SUPPORT = 1/' squashfs-tools/Makefile
 sed -i -e 's/^#LZMA_XZ_SUPPORT.*=.*/LZMA_XZ_SUPPORT = 1/' squashfs-tools/Makefile
+sed -i -e 's/^#ZSTD_SUPPORT.*=.*/ZSTD_SUPPORT = 1/' squashfs-tools/Makefile
 sed -i -e "s/-O2 -Wall/%{rpmcflags}/" squashfs-tools/Makefile
 
 %build
