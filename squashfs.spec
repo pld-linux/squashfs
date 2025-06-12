@@ -1,12 +1,12 @@
 Summary:	Set of tools which creates squashfs filesystem
 Summary(pl.UTF-8):	Zestaw narzędzi do tworzenia systemu plików squashfs
 Name:		squashfs
-Version:	4.6.1
+Version:	4.7
 Release:	1
 License:	GPL v2+
 Group:		Base/Utilities
 Source0:	https://github.com/plougher/squashfs-tools/archive/refs/tags/%{version}.tar.gz
-# Source0-md5:	db23a40fa0dc54b4d6d225fb20ee6555
+# Source0-md5:	a303f3747192f0b0b1f66f695669b88f
 URL:		https://github.com/plougher/squashfs-tools
 BuildRequires:	attr-devel
 BuildRequires:	lz4-devel
