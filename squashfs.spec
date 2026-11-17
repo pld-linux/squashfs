@@ -5,7 +5,10 @@ Version:	4.7.5
 Release:	1
 License:	GPL v2+
 Group:		Base/Utilities
-Source0:	https://github.com/plougher/squashfs-tools/archive/refs/tags/%{version}.tar.gz
+#Source0Download: https://github.com/plougher/squashfs-tools/releases
+# TODO: use release tarballs: https://github.com/plougher/squashfs-tools/releases/download/%{version}/squashfs-tools-%{version}.tar.gz
+# or named archive tarballs: https://github.com/plougher/squashfs-tools/archive/%{version}/squashfs-tools-%{version}.tar.gz
+Source0:	https://github.com/plougher/squashfs-tools/archive/%{version}.tar.gz
 # Source0-md5:	183807a29b969d8e3a1cd27f09fe8179
 URL:		https://github.com/plougher/squashfs-tools
 BuildRequires:	attr-devel
@@ -14,11 +17,8 @@ BuildRequires:	lzo-devel >= 2.04
 BuildRequires:	xz-devel >= 5.0.0
 BuildRequires:	zlib-devel
 BuildRequires:	zstd-devel
-%ifarch %{x8664}
-Requires:	libgcc_s.so.1()(64bit)
-%else
-Requires:	libgcc_s.so.1
-%endif
+# required for pthread_cancel(), pthread_exit()
+Requires:	libgcc%{?_isa}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sbindir	/sbin
